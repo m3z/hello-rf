@@ -13,7 +13,7 @@ def startControllers():
 def	setupControlPlane():
 	cmd.lxcStart('router1')
 	cmd.lxcStart('router2')
-	cmd.ovsOpenflowd('dp0', '127.0.0.1', 6633, 'rfovs')
+	cmd.ovsOpenflowd('dp0', '127.0.0.1', 6666, 'rfovs')
 	cmd.ifconfig('dp0', 'up')
 	cmd.ovsOpenflowd('br0', '127.0.0.1', 6363)
 	cmd.ifconfig('br0', 'up', '192.168.1.1', '255.255.255.0')
@@ -34,7 +34,7 @@ def setupTopology():
 	openflowSwitchList = topology.getOpenflowSwitch()
 	for openflowSwitch in openflowSwitchList:
 		interfaceList = topology.getOpenflowSwitchInterface(openflowSwitch)
-		cmd.ovsOpenflowd(openflowSwitch, '127.0.0.1', 6633)
+		cmd.ovsOpenflowd(openflowSwitch, '210.25.137.243', 6633)
 		for	 interface in interfaceList:
 			cmd.ovsDpctl(openflowSwitch, interface)
 
