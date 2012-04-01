@@ -26,7 +26,7 @@ def	setupControlPlane():
 		cmd.ovsDpctl('br0', interface)
 
 def setupTopology():
-	topology = topologyParser.Topology()
+	topology = topologyParser.Topology('topology.xml')
 	hostList = topology.getHost()
 	for host in hostList:
 		cmd.lxcStart(host)
