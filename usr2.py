@@ -33,7 +33,7 @@ def setupTopology():
 		inportList = cmd.getPort(dpidlist[i])
 		for	 interface in interfaceList:
                         for ip in ipList:
-                                cmd.addFlowSpace(dpidlist[i],'20','in_port='+ inportList[interface]+',nw_src='+ip,'Slice:slice2=4')
+                                cmd.addFlowSpace(dpidlist[i],'20','in_port='+ inportList[interface]+',nw_src='+ip,'Slice:rfslice=4')
                 i=i+1     
                 
 if __name__ == '__main__':
