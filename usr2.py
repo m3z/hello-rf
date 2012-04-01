@@ -8,7 +8,7 @@ isDebug = True;
 #ovsList = {}
 
 def setSlices():
-        cmd.createSlice('rfSlice','tcp:210.25.137.242:6666','rf@visor.com')
+        cmd.createSlice('rfSlice','tcp:210.25.137.242:6633','rf@visor.com')
         
 
 def setupTopology():
@@ -33,7 +33,7 @@ def setupTopology():
 		inportList = cmd.getPort(dpidlist[i])
 		for	 interface in interfaceList:
                         for ip in ipList:
-                                cmd.addFlowSpace(dpidlist[i],'20','in_port='+ inportList[interface]+',nw_src='+ip,'Slice:rfslice=4')
+                                cmd.addFlowSpace(dpidlist[i],'20','in_port='+ inportList[interface]+',nw_src='+ip,'Slice:rfSlice=4')
                 i=i+1     
                 
 if __name__ == '__main__':
