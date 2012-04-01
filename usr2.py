@@ -22,11 +22,7 @@ def setupTopology():
         
 	dpidlist = cmd.getDpidList()
 	
-	for openflowSwitch in openflowSwitchList:
-		interfaceList = topology.getOpenflowSwitchInterface(openflowSwitch)
-		
-		for	 interface in interfaceList:
-			cmd.ovsDpctl(openflowSwitch, interface)
+
         i=0
         for openflowSwitch in openflowSwitchList:
                 interfaceList = topology.getOpenflowSwitchInterface(openflowSwitch)
@@ -34,7 +30,13 @@ def setupTopology():
 		for	 interface in interfaceList:
                         for ip in ipList:
                                 cmd.addFlowSpace(dpidlist[i],'20','in_port='+ inportList[interface]+',nw_src='+ip,'Slice:rfSlice=4')
-                i=i+1     
+                i=i+1
+
+	for openflowSwitch in openflowSwitchList:
+		interfaceList = topology.getOpenflowSwitchInterface(openflowSwitch)
+		
+		for	 interface in interfaceList:
+			cmd.ovsDpctl(openflowSwitch, interface)
                 
 if __name__ == '__main__':
         setSlices()
