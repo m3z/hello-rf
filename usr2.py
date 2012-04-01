@@ -14,19 +14,19 @@ def setSlices():
 def setupTopology():
 	topology = topologyParser.Topology('topology.xml')
 	hostList = topology.getHost()
-#	for host in hostList:
-#		cmd.lxcStart(host)
+	for host in hostList:
+		cmd.lxcStart(host)
 
 	openflowSwitchList = topology.getOpenflowSwitch()
         ipList = topology.getInterfaceIp()
         
 	dpidlist = cmd.getDpidList()
 	
-#	for openflowSwitch in openflowSwitchList:
-#		interfaceList = topology.getOpenflowSwitchInterface(openflowSwitch)
+	for openflowSwitch in openflowSwitchList:
+		interfaceList = topology.getOpenflowSwitchInterface(openflowSwitch)
 		
-#		for	 interface in interfaceList:
-#			cmd.ovsDpctl(openflowSwitch, interface)
+		for	 interface in interfaceList:
+			cmd.ovsDpctl(openflowSwitch, interface)
         i=0
         for openflowSwitch in openflowSwitchList:
                 interfaceList = topology.getOpenflowSwitchInterface(openflowSwitch)

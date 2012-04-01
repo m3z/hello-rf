@@ -13,7 +13,7 @@ def startControllers():
 def	setupControlPlane():
 	cmd.lxcStart('router1')
 	cmd.lxcStart('router2')
-	cmd.ovsOpenflowd('dp0', '127.0.0.1', 6633, 'rfovs')
+	cmd.ovsOpenflowd('dp0', '127.0.0.1', 6666, 'rfovs')
 	cmd.ifconfig('dp0', 'up')
 	cmd.ovsOpenflowd('br0', '127.0.0.1', 6363)
 	cmd.ifconfig('br0', 'up', '192.168.1.1', '255.255.255.0')
@@ -41,4 +41,4 @@ def setupTopology():
 if __name__ == '__main__':
 	startControllers()
 	setupControlPlane()
-	setupTopology()
+#	setupTopology()

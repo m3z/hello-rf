@@ -29,4 +29,4 @@ def startOVS():
 
 if __name__ == '__main__':
         cleanAll()
-#        startOVS()
+        startOVS()
