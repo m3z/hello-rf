@@ -8,7 +8,7 @@ isDebug = True;
 #ovsList = {}
 
 def setSlices():
-        cmd.createSlice('rfSlice','tcp:210.25.137.242:6633','rf@visor.com')
+        cmd.createSlice('rfSlice','tcp:210.25.137.242:6666','rf@visor.com')
         
 
 def setupTopology():
