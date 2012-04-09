@@ -18,7 +18,7 @@ def cleanAll():
 
 def startOVS():
 
-        dictFile = open('/swtitchDict','wb')
+        dictFile = open('/switchDict','wb')
         pickle.dump(openflowSwitchDict,dictFile)
         dictFile.close()
 

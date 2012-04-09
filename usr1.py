@@ -14,7 +14,7 @@ def setSlices():
         
 
 def setupTopology():
-	topology = topologyParser.Topology('topology.xml')
+	topology = topologyParser.Topology('topology2.xml')
 	hostList = topology.getHost()
 	for host in hostList:
 		cmd.lxcStart(host)
@@ -26,8 +26,8 @@ def setupTopology():
         file.close()
         sortedList = sorted(tmpDict.items(), lambda x, y: cmp(x[1], y[1]))
         for i in range(0,openflowSwitchNum):
-                ovsDict[openflowSwitchList[i]] = sortedList[i]
-                tmpDict[sortedList[i]]=tmpDict[sortedList[i]]+1
+                ovsDict[openflowSwitchList[i]] = sortedList[i][0]
+                tmpDict[sortedList[i][0]]=tmpDict[sortedList[i][0]]+1
         file = open('/switchDict','wb')
         pickle.dump(tmpDict,file)
         file.close()
