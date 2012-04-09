@@ -19,6 +19,7 @@ def setupTopology():
 
 	openflowSwitchList = topology.getOpenflowSwitch()
         ipList = topology.getInterfaceIp()
+        ipList = list(set(ipList))
         
 	dpidlist = cmd.getDpidList()
 	
