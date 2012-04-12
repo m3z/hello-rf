@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<topology version="0.1">
+    <nodes version="0.1">
+		<node id="003" type="host">
+			<name>host1</name>
+			<interfaces version="0.1"></interfaces>
+			<software version="0.1"></software>
+			<protocolStack version="0.1"></protocolStack>
+		</node>
+		<node id="004" type="host">
+			<name>host2</name>
+			<interfaces version="0.1"></interfaces>
+			<software version="0.1"></software>
+			<protocolStack version="0.1"></protocolStack>
+		</node>
+		<node id="013" type="openflowSwitch">
+			<name>switch0</name>
+			<interfaces version="0.1">
+				<interface id="014">
+					<name>host1.0</name>
+					<ipAddress>10.3.0.0/24</ipAddress>
+					<ipv6Address></ipv6Address>
+					<mtu></mtu>
+					<status>active</status>
+				</interface>
+				<interface id="015">
+					<name>eth0</name>
+					<ipAddress>10.10.1.0/24</ipAddress>
+					<ipv6Address></ipv6Address>
+					<mtu></mtu>
+					<status>active</status>
+				</interface>
+			</interfaces>
+			<software version="0.1"></software>
+			<protocolStack version="0.1"></protocolStack>
+		</node>
+		<node id="016" type="openflowSwitch">
+			<name>switch1</name>
+			<interfaces version="0.1">
+				<interface id="017">
+					<name>eth2</name>
+					<ipAddress>10.10.1.0/24</ipAddress>
+					<ipv6Address></ipv6Address>
+					<mtu></mtu>
+					<status>active</status>
+				</interface>
+				<interface id="018">
+					<name>eth3</name>
+					<ipAddress>10.10.3.0/24</ipAddress>
+					<ipv6Address></ipv6Address>
+					<mtu></mtu>
+					<status>active</status>
+				</interface>
+			</interfaces>
+			<software version="0.1"></software>
+			<protocolStack version="0.1"></protocolStack>
+		</node>
+		<node id="019" type="openflowSwitch">
+			<name>switch2</name>
+			<interfaces version="0.1">
+				<interface id="020">
+					<name>eth4</name>
+					<ipAddress>10.10.3.0/24</ipAddress>
+					<ipv6Address></ipv6Address>
+					<mtu></mtu>
+					<status>active</status>
+				</interface>
+				<interface id="021">
+					<name>host2.0</name>
+					<ipAddress>10.5.0.0/24</ipAddress>
+					<ipv6Address></ipv6Address>
+					<mtu></mtu>
+					<status>active</status>
+				</interface>
+			</interfaces>
+			<software version="0.1"></software>
+			<protocolStack version="0.1"></protocolStack>
+		</node>
+	</nodes>
+
+	<links version="0.1"></links>
+</topology>

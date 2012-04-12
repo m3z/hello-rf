@@ -9,7 +9,7 @@ import pickle
 isDebug = True;
 
 
-openflowSwitchList = ['switch0','switch1']
+openflowSwitchList = ['switch0','switch1','switch2']
 openflowSwitchDict = {'switch0':0,'switch1':0}
 
 def cleanAll():
