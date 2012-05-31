@@ -63,6 +63,12 @@ def ovsDpctl(entity, interface, action = 'add-if'):
 
 # below are defined by zheng.
 
+def runFlowVisor():
+        cmdString = "/usr/local/sbin/flowvisor /usr/local/etc/flowvisor/flowvisor-config.xml &"
+        os.system(cmdString)
+        print cmdString
+
+
 def delSlices(slicename):
         cmdString = 'fvctl --passwd-file=/root/.fvp deleteSlice ' + slicename
         os.system(cmdString)

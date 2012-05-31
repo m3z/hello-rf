@@ -15,7 +15,7 @@ openflowSwitchDict = {'switch0':0,'switch1':0}
 def cleanAll():
         cmd.cleanSlices()
         cmd.cleanFlowSpace()
-
+	cmd.runFlowVisor()
 def startOVS():
 
         dictFile = open('/switchDict','wb')
